@@ -12,6 +12,13 @@
 
 @font-face {
   font-family: 'Open Sauce One';
+  src: url('/src/assets/fonts/SauceOne/OpenSauceOne-Semibold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sauce One';
   src: url('/src/assets/fonts/SauceOne/OpenSauceOne-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
@@ -34,6 +41,12 @@
 
 @font-face {
   font-family: 'Open Sauce Sans';
+  src: url('/src/assets/fonts/SauceOne/OpenSauceSans-Semibold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sauce Sans';
   src: url('/src/assets/fonts/SauceOne/OpenSauceSans-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
@@ -48,31 +61,39 @@
 
 /* Font Classes */
 .so-bold {
-  font-family: "Open Sauce One";
-  font-weight: 700;
+  font-family: "Open Sauce One",sans-serif!important;
+  font-weight: 700!important;
+}
+.so-semibold{
+  font-family: "Open Sauce One",sans-serif!important;
+  font-weight: 600!important;
 }
 
 .so-medium {
-  font-family: "Open Sauce One";
-  font-weight: 500;
+  font-family: "Open Sauce One",sans-serif!important;
+  font-weight: 500!important;
 }
 
 .so-regular {
-  font-family: "Open Sauce One";
-  font-weight: 400;
+  font-family: "Open Sauce One",sans-serif!important;
+  font-weight: 400!important;
 }
 
 .ss-bold {
-  font-family: "Open Sauce Sans";
-  font-weight: 700;
+  font-family: "Open Sauce Sans",sans-serif!important;
+  font-weight: 700!important;
+}
+.ss-semibold{
+  font-family: "Open Sauce Sans",sans-serif!important;
+  font-weight: 600!important;
 }
 
 .ss-medium {
-  font-family: "Open Sauce Sans";
-  font-weight: 500;
+  font-family: "Open Sauce Sans",sans-serif!important;
+  font-weight: 500!important;
 }
 
 .ss-regular {
-  font-family: "Open Sauce Sans";
-  font-weight: 400;
+  font-family: "Open Sauce Sans",sans-serif!important;
+  font-weight: 400!important;
 }

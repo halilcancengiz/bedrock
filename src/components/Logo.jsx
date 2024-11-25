@@ -8,7 +8,7 @@ export const Logo = () => {
                 <path d="M413.847 496.01L298.356 294.573L357.856 191.516L534.847 496.01L413.847 496.01Z" fill="#FFD600" />
                 <path d="M60.4999 325L292.695 325.7L352.195 428.757L-5.5531e-05 429.789L60.4999 325Z" fill="#FE6263" />
             </svg>
-            <div className="tb-bold xs:text-[30px] text-[24px] text-neutral-800">Bedrock</div>
+            <div className="so-semibold xs:text-[30px] text-[24px] text-neutral-800 ">Jobsadvision</div>
         </NavLink>
 
     )

@@ -30,19 +30,46 @@ const Navbar = () => {
     }, [isLgScreen]);
 
     return (
-        <header className="flex items-center bg-neutral-100 gap-5 text-neutral-600 py-6 border-b-[1px] border-neutral-300 relative">
-            <div className="mx-auto max-w-[1221px] w-full flex items-center text-[18px] px-6 leading-[20px] justify-between">
-                <Logo />
-                <div className="flex items-center gap-x-8">
+        <header className="flex items-center bg-white gap-5 h-[70px] text-neutral-600 py-6 border-b-[1px] border-neutral-300 relative px-6">
+            <div className="mx-auto max-w-[1296px] w-full flex items-center text-[18px] leading-[20px] justify-between">
+                <div className="flex items-center gap-x-8 invisible">
                     <nav className="lg:flex hidden items-center gap-x-8">
-                        <NavLink className="flex items-center gap-1 hover:text-primary transition-all duration-300 tb-medium" to="/" >
+                        <NavLink className="flex items-center gap-1 text-primary transition-all duration-300 so-medium text-sm" to="/" >
                             Start
                         </NavLink>
-                        <NavLink className="hover:text-primary transition-all duration-300 tb-medium" to="/services" >
-                            Dienstleistungen
-                        </NavLink>
+                    </nav>
 
-                        <div className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative">
+                    <div className="flex items-center gap-x-8">
+                        <NavLink className="md:flex hidden" to="/contact">
+                            <Button>
+                                Kontakt
+                            </Button>
+                        </NavLink>
+                        <div className={`${isMobileNavOpen ? "bg-secondary3" : "bg-primary"} rounded-[10px] hover:bg-secondary3 transition-all duration-300 lg:hidden ml-3`}>
+                            <Hamburger
+                                aria-label="Toggle mobile navbar"
+                                toggled={isMobileNavOpen}
+                                toggle={toggleMobileNav}
+                                size={20}
+                                color="white"
+                                duration={0.8}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <Logo />
+
+                <div className="flex items-center gap-6">
+                    <div className="lg:flex hidden items-center gap-x-8">
+                        <NavLink className="flex items-center gap-1 text-primary transition-all duration-300 so-semibold text-sm" to="/" >
+                            Start
+                        </NavLink>
+                        {/* <NavLink className="hover:text-primary transition-all duration-300 tb-medium" to="/services" >
+                            Dienstleistungen
+                        </NavLink> */}
+
+                        {/* <div className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative">
                             <div className="tb-medium">Preise</div>
                             <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
                             <div className="absolute invisible opacity-0 translate-y-[10px] z-[11] pt-[13px] group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out -left-1/2 top-full  text-neutral-600">
@@ -58,22 +85,22 @@ const Navbar = () => {
                                     </NavLink>
                                 </div>
                             </div>
-                        </div>
-                    </nav>
+                        </div> */}
+                    </div>
 
                     <div className="flex items-center gap-x-8">
                         <NavLink className="md:flex hidden" to="/contact">
-                            <Button className="tb-bold" variant="primary" size="small">
+                            <Button>
                                 Kontakt
                             </Button>
                         </NavLink>
-                        <div className={`${isMobileNavOpen ? "bg-secondary3" : "bg-primary"} rounded-[10px] hover:bg-secondary3 transition-all duration-300 lg:hidden ml-3`}>
+                        <div className={`bg-white rounded-[10px] hover:bg-secondary3 transition-all duration-300 lg:hidden ml-3`}>
                             <Hamburger
                                 aria-label="Toggle mobile navbar"
                                 toggled={isMobileNavOpen}
                                 toggle={toggleMobileNav}
-                                size={20}
-                                color="white"
+                                size={30}
+                                color="#262626"
                                 duration={0.8}
                             />
                         </div>
