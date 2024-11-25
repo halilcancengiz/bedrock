@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Open Sauce One */
+@font-face {
+  font-family: 'Open Sauce One';
+  src: url('/src/assets/fonts/SauceOne/OpenSauceOne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sauce One';
+  src: url('/src/assets/fonts/SauceOne/OpenSauceOne-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sauce One';
+  src: url('/src/assets/fonts/SauceOne/OpenSauceOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Open Sauce Sans */
+@font-face {
+  font-family: 'Open Sauce Sans';
+  src: url('/src/assets/fonts/SauceOne/OpenSauceSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sauce Sans';
+  src: url('/src/assets/fonts/SauceOne/OpenSauceSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sauce Sans';
+  src: url('/src/assets/fonts/SauceOne/OpenSauceSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Font Classes */
+.so-bold {
+  font-family: "Open Sauce One";
+  font-weight: 700;
+}
+
+.so-medium {
+  font-family: "Open Sauce One";
+  font-weight: 500;
+}
+
+.so-regular {
+  font-family: "Open Sauce One";
+  font-weight: 400;
+}
+
+.ss-bold {
+  font-family: "Open Sauce Sans";
+  font-weight: 700;
+}
+
+.ss-medium {
+  font-family: "Open Sauce Sans";
+  font-weight: 500;
+}
+
+.ss-regular {
+  font-family: "Open Sauce Sans";
+  font-weight: 400;
+}
