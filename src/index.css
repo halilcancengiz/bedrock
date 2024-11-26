@@ -97,3 +97,55 @@
   font-family: "Open Sauce Sans",sans-serif!important;
   font-weight: 400!important;
 }
+
+
+
+.bplaceholder::placeholder{
+  font-weight: 500 !important;
+  font-family: 'ThicccBoi-medium' !important;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hover-up {
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up:hover {
+  transform: translateY(-3px);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up-md {
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up-md:hover {
+  transform: translateY(-5px);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up-lg {
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up-lg:hover {
+  transform: translateY(-10px);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-down {
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-down:hover {
+  transform: translateY(3px);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
