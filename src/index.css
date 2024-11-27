@@ -101,8 +101,9 @@
 
 
 .bplaceholder::placeholder{
-  font-weight: 500 !important;
-  font-family: 'ThicccBoi-medium' !important;
+  font-weight: 400 !important;
+  font-family: "Open Sauce One",sans-serif!important;
+  color: #222222!important;
 }
 
 input[type=number] {

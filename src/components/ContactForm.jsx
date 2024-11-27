@@ -44,7 +44,7 @@ const ContactForm = () => {
                         Lassen Sie uns gemeinsam Ihre Ziele erreichen, mehr Bewerber erhalten und ihre vakanten Stellen besetzen.
                     </div>
                     <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap'>
-                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer bg-white flex  gap-x-3 hover-up-md  py-[21px] px-6 border border-neutral-300'>
+                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer rounded-md bg-white flex  gap-x-3 hover-up-md  py-[21px] px-6 border border-neutral-300'>
                             <div className="bg-secondary size-12 min-w-12 min-h-12 p-2.5  mr-[25px] overflow-hidden group/parent">
                                 <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                     <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="gray" />
@@ -56,7 +56,7 @@ const ContactForm = () => {
                                 <div className='so-bold text-t-primary text-[18px] group-hover:text-primary transition-colors duration-300 break-all'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
                             </a>
                         </div>
-                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer bg-white flex items-center gap-x-3 hover-up-md py-[21px] px-6 border border-neutral-300'>
+                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer rounded-md bg-white flex items-center gap-x-3 hover-up-md py-[21px] px-6 border border-neutral-300'>
                             <div className="bg-secondary size-12 min-w-12 min-h-12 p-2.5  mr-[25px] overflow-hidden group">
                                 <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                     <g clipPath="url(#clip0)">
@@ -85,7 +85,7 @@ const ContactForm = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.80, duration: 0.3 }}
                     style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
-                    className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] relative bg-white"
+                    className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 rounded-md w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] relative bg-white"
                 >
                     <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[20px] bg-white">
                         <div className="md:col-span-1 col-span-2 flex flex-col gap-3">

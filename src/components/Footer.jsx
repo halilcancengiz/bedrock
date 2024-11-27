@@ -26,7 +26,7 @@ const Footer = () => {
                     </div>
 
                     <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap'>
-                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex  gap-x-3 hover-up-md py-[21px] px-6 border border-neutral-300'>
+                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer rounded-md flex  gap-x-3 hover-up-md py-[21px] px-6 border border-neutral-300'>
                             <div className="bg-secondary size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
                                 <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                     <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="gray" />
@@ -38,7 +38,7 @@ const Footer = () => {
                                 <div className='tb-bold text-t-primary text-[18px] group-hover:text-primary transition-colors duration-300 break-all'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
                             </a>
                         </div>
-                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md py-[21px] px-6 border border-neutral-300'>
+                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer rounded-md flex items-center gap-x-3 hover-up-md py-[21px] px-6 border border-neutral-300'>
                             <div className="bg-secondary size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group">
                                 <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                     <g clipPath="url(#clip0)">

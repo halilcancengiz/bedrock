@@ -8,10 +8,29 @@ import jobninja from "../assets/images/jobninja.png"
 import mittelstand from "../assets/images/mittelstand.png"
 import InfinitySlider from '../components/InfinitySlider'
 import ContactForm from '../components/ContactForm'
+import InfiniteScrollTags from '../components/InfiniteScrollTags'
+import * as motion from "framer-motion/client";
+import cardfirsticon from "../assets/images/cardfirsticon.png"
+import cardsecondicon from "../assets/images/cardsecondicon.png"
+import cardthirdicon from "../assets/images/cardthirdicon.png"
 
+import sectionFirstImage from "../assets/images/section-first-image.jpg"
+import sectionSecondImage from "../assets/images/section-second-image.png"
+import sectionThirdImage from "../assets/images/section-third-image.jpg"
+import check from "../assets/images/check.png"
 
 const Home = () => {
     const [star, setStar] = useState(["1", " 2", "3", "4", "5"])
+    const fadeInAnimationVariant = {
+        initial: {
+            opacity: 0,
+            y: 20
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+        }
+    };
     return (
         <main>
             <section className='bg-secondary px-6 py-[72px] overflow-hidden'>
@@ -90,14 +109,197 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='w-full bg-secondary py-[72px]'>
+            <section className='w-full bg-white py-[72px]'>
                 <div className='max-w-[1296px] w-full mx-auto'>
                     <InfinitySlider />
                 </div>
             </section>
 
+            <section className='py-[72px] flex flex-col bg-white gap-y-16'>
+
+                <div className='flex items-center justify-center max-w-[1296px] flex-col w-full mx-auto'>
+                    <div className='text-[46px] ss-bold text-t-primary'>Maximaler Mehrwert</div>
+                    <div className='flex flex-col items-center justify-center text-base text-t-primary'>
+                        <div>Stellenanzeigen mit uns zu schalten bringt Ihnen zahlreiche Vorteile.</div>
+                        <div>Die wichtigsten im Überblick:</div>
+                    </div>
+                </div>
+
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
+                    className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1296px] w-full mx-auto">
+                    <NavLink to="/ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <div>
+                                <img src={cardfirsticon} alt="" />
+                            </div>
+                            <div className="md:text-[24px] text-[22px] ss-medium group-hover:text-primary">Prozessübernahme</div>
+                            <div className="text-neutral-600 text-[18px] ss-regular leading-[30px]">Wir kümmern uns um den gesamten Prozess – von der Erstellung bis zur Veröffentlichung Ihrer Stellenanzeigen. Sie haben weniger Arbeit und sparen wertvolle Zeit.</div>
+                        </div>
+
+                    </NavLink>
+                    <NavLink to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <div>
+                                <img src={cardsecondicon} alt="" />
+                            </div>
+                            <div className="md:text-[24px] text-[22px] ss-medium group-hover:text-primary">Kosteneinsparnis</div>
+                            <div className="text-neutral-600 text-[18px] ss-regular leading-[30px]">Mit unseren Stellenpaketen sparen Sie bis zu 70 % der Kosten im Vergleich zu Einzelbuchungen.</div>
+                        </div>
+
+
+                    </NavLink>
+                    <NavLink to="/company-listing-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <div>
+                                <img src={cardthirdicon} alt="" />
+                            </div>
+                            <div className="md:text-[24px] text-[22px] ss-medium group-hover:text-primary">Top Beratung</div>
+                            <div className="text-neutral-600 text-[18px] ss-regular leading-[30px]">Profitieren Sie von unserer über 20-jährigen Markterfahrung. Wir wissen genau, welche Stellenmärkte am besten zu Ihren Anforderungen passen.</div>
+                            <div className="md:flex hidden"></div>
+
+                        </div>
+
+
+                    </NavLink>
+                </motion.div>
+
+                <div className='flex items-center justify-center flex-col gap-4'>
+                    <hr className='w-40 bg-gray-300 h-[2px]' />
+                    <Button>Kontakt</Button>
+                </div>
+
+
+            </section>
+
+            <section className='py-[72px] bg-secondary'>
+                <div className='flex flex-col max-w-[1296px] w-full mx-auto gap-[72px]'>
+                    <div className='ss-bold text-t-primary text-[46px] md:mb-[23.934px] xs:mb-[17.760px] mb-[15.984px]'>Die HR Lösung für:</div>
+                    <InfiniteScrollTags />
+                </div>
+            </section>
+
+
+            <section className='py-[72px] flex flex-col bg-white gap-16'>
+                <div className='max-w-[1296px] w-full mx-auto flex flex-col gap-5 text-t-primary ss-bold text-[46px] text-center'>
+                    Wie es funktioniert? - in 3 Simplen Schritten zum Erfolg
+                </div>
+                <div className='max-w-[1296px] w-full mx-auto flex flex-col gap-5'>
+                    <div className="grid grid-cols-2 items-center gap-2">
+                        <div className='lg:col-span-1 col-span-2 h-full flex flex-col bg-secondary gap-4 p-[60px] rounded-lg'>
+                            <div className='text-t-primary text-[24px] ss-bold'>1. Stellenmarkt Auswahl</div>
+                            <div className='ss-regular text-t-primary'>Wählen Sie Ihre bevorzugten Stellenmärkte aus und wir erstellen für Sie ein individuelles Top-Angebot!</div>
+                            <div className='ss-regular text-t-primary'>Auf Wunsch beraten wir Sie persönlich und stellen ein professionelles Paket zusammen, das genau auf Ihre Spezifikationen abgestimmt ist.</div>
+                            <div className='ss-bold text-t-primary'>Ihre Vorteile auf einen Blick:</div>
+                            <div className='flex flex-col gap-2'>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Alle Top-Stellenmärkte verfügbar</div>
+                                </div>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Über 20 Jahre Agenturerfahrung</div>
+                                </div>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Branchenspezifische Stellenmärkte für Ihre individuellen Bedürfnisse</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='lg:col-span-1 col-span-2 h-full flex-col flex items-center justify-center bg-custom-yellow rounded-lg'>
+                            <img className='max-w-[80%] object-contain aspect-square' src={sectionFirstImage} alt="" />
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-2 items-center gap-2">
+                        <div className='lg:col-span-1 col-span-2 h-full flex flex-col bg-secondary gap-4 p-[60px] rounded-lg'>
+                            <div className='text-t-primary text-[24px] ss-bold'>2. Anzeigenerstellung</div>
+                            <div className='ss-regular text-t-primary'>Nach Auftragsbestätigung erstellen wir gemäß Ihren Spezifikationen und Wünschen Ihre professionelle Stellenanzeige und senden Ihnen einen Vorschaulink zu.</div>
+                            <div className='ss-bold text-t-primary'>Ihre Vorteile auf einen Blick:</div>
+                            <div className='flex flex-col gap-2'>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Texterstellung</div>
+                                </div>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>AGG-Check</div>
+                                </div>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Vorschaulink</div>
+                                </div>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Schaltung innerhalb von 48 Stunden</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='lg:col-span-1 col-span-2 h-full flex-col flex items-center justify-center bg-custom-yellow rounded-lg'>
+                            <img className='max-w-[80%] object-contain aspect-square' src={sectionSecondImage} alt="" />
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-2 items-center gap-2">
+                        <div className='lg:col-span-1 col-span-2 h-full flex flex-col bg-secondary gap-4 p-[60px] rounded-lg'>
+                            <div className='text-t-primary text-[24px] ss-bold'>3. Bewerber ohne Ende</div>
+                            <div className='ss-regular text-t-primary'>Nach Ihrer Bestätigung geht Ihre Stellenanzeige online, und Sie können sich auf zahlreiche Bewerbungen freuen.</div>
+                            <div className='ss-bold text-t-primary'>Ihre Vorteile auf einen Blick:</div>
+                            <div className='flex flex-col gap-2'>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Kontinuierliche Betreuung Ihrer Stellenanzeige</div>
+                                </div>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Gegebenenfalls Anpassungen, Budgeterhöhungen und Laufzeitverlängerungen</div>
+                                </div>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Resonanzabfragen</div>
+                                </div>
+                                <div className='flex items-center gap-2'>
+                                    <div>
+                                        <img className='rounded-full' src={check} alt="" />
+                                    </div>
+                                    <div className='ss-regular text-t-primary'>Erweiterte Zusatzleistungen</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='lg:col-span-1 col-span-2 h-full flex-col flex items-center justify-center bg-custom-yellow rounded-lg'>
+                            <img className='max-w-[80%] object-contain aspect-square' src={sectionThirdImage} alt="" />
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
             <section className='py-[72px] bg-[#F4F3EF] flex flex-col'>
-                <div className='max-w-[1296px] w-full mx-auto mb-10 so-bold text-[46px] text-t-primary'>Kundestimme:</div>
+                <div className='max-w-[1296px] w-full mx-auto mb-10 ss-bold text-[46px] text-t-primary'>Kundestimme:</div>
                 <div className='max-w-[1296px] w-full mx-auto grid md:grid-cols-2 grid-cols-1 gap-y-[12px] gap-x-[8px]'>
                     <div className='grid-cols-1 flex flex-col rounded-lg border-gray-300 justify-between border xs:py-[30px] xs:px-[40px] py-[24px] px-[24px]'>
                         <div className='flex flex-col flex-1'>

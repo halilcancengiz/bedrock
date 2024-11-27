@@ -24,17 +24,17 @@ import yourFirmLogo from "../assets/images/yourfirm.png";
 
 const companies = [
     { name: "Facebook", logo: facebookLogo },
-    { name: "Indeed Gray", logo: indeedGrayLogo },
+    { name: "Indeed", logo: indeedGrayLogo },
     { name: "JobScout", logo: jobScoutLogo },
     { name: "Jobware", logo: jobwareLogo },
     { name: "Kalaydo", logo: kalaydoLogo },
     { name: "LinkedIn", logo: linkedinLogo },
-    { name: "Meine Stadt", logo: meineStadtLogo },
+    { name: "meinestadt", logo: meineStadtLogo },
     { name: "Monster", logo: monsterLogo },
     { name: "Stellenanzeigen", logo: stellenanzeigenLogo },
-    { name: "Stepstone Gray", logo: stepstoneGrayLogo },
+    { name: "Stepstone", logo: stepstoneGrayLogo },
     { name: "Xing", logo: xingLogo },
-    { name: "Your Firm", logo: yourFirmLogo },
+    { name: "yourfirm", logo: yourFirmLogo },
 ];
 
 const InfinitySlider = () => {
@@ -71,12 +71,12 @@ const InfinitySlider = () => {
             }}
         >
             {companies.map((company, index) => (
-                <SwiperSlide key={index}>
-                    <div className="flex flex-col items-center">
+                <SwiperSlide className="flex items-center justify-center" key={index}>
+                    <div className={`flex flex-col items-center justify-center`}>
                         <img
                             src={company.logo}
                             alt={`${company.name} logo`}
-                            className="w-28 h-32 object-contain"
+                            className={`h-9 ${company.name.toLocaleLowerCase() == "indeed" || company.name.toLocaleLowerCase() == "xing" || company.name.toLocaleLowerCase() == "linkedin" || company.name.toLocaleLowerCase() == "jobware" || company.name.toLocaleLowerCase() == "yourfirm" ? "py-1" : ""} ${company.name.toLocaleLowerCase() == "facebook" || company.name.toLocaleLowerCase() == "monster" || company.name.toLocaleLowerCase() == "stepstone" ? "py-2" : ""} w-auto object-contain mx-auto`}
                         />
                     </div>
                 </SwiperSlide>
