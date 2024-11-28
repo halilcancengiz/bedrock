@@ -218,8 +218,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='lg:col-span-1 col-span-2 h-full flex-col flex items-center justify-center bg-white border'>
-                            <img className='lg:max-w-[80%] max-w-[475px] object-contain aspect-square' src={sectionFirstImage} alt="" />
+                        <div className='lg:col-span-1 col-span-2 h-full flex-col px-6 flex items-center justify-center bg-white border'>
+                            <img className='lg:max-w-[80%] max-w-[475px] w-full object-contain aspect-square' src={sectionFirstImage} alt="" />
                         </div>
                     </div>
                     <div className="grid grid-cols-2 items-center gap-2">
@@ -254,8 +254,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='lg:col-span-1 col-span-2 h-full flex-col flex items-center justify-center border bg-white'>
-                            <img className='lg:max-w-[80%] max-w-[475px] object-contain aspect-square' src={sectionSecondImage} alt="" />
+                        <div className='lg:col-span-1 col-span-2 h-full flex-col px-6 flex items-center justify-center border bg-white'>
+                            <img className='lg:max-w-[80%] max-w-[475px] w-full object-contain aspect-square' src={sectionSecondImage} alt="" />
                         </div>
                     </div>
                     <div className="grid grid-cols-2 items-center gap-2">
@@ -290,8 +290,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='lg:col-span-1 col-span-2 h-full flex-col flex items-center justify-center bg-white border'>
-                            <img className='lg:max-w-[80%] max-w-[475px] object-contain aspect-square' src={sectionThirdImage} alt="" />
+                        <div className='lg:col-span-1 col-span-2 h-full flex-col px-6 flex items-center justify-center bg-white border'>
+                            <img className='lg:max-w-[80%] max-w-[475px] w-full object-contain aspect-square' src={sectionThirdImage} alt="" />
                         </div>
                     </div>
                 </div>
