@@ -41,7 +41,7 @@ const Home = () => {
                         </h1>
                         <div className='flex flex-col gap-6 lg:max-w-[384px] max-w-[600px] w-full'>
                             <div className='font-medium xs:text-[16px] text-[14px] xs:leading-[24px] leading-[21px] text-t-primary'>
-                                Then use this short paragraph of text to add some extra information and entice the viewer to read the rest of the page.
+                                Mit unserer Stellenpaketen erreichen Sie mit minimalen Kosten maximale Reichweite.
                             </div>
                             <NavLink to="/contact" className="w-full">
                                 <Button className="inline-flex text-[16px]">
@@ -54,7 +54,7 @@ const Home = () => {
                     <div className='flex justify-end w-1/2 relative -mt-20'>
                         <div className='max-w-[498px] w-full aspect-square bg-custom-yellow md:rounded-tl-[120px] rounded-tl-[60px] relative'>
                             <div className='uppercase absolute top-[60px] left-1/2 -translate-x-1/2 bg-white text-t-primary text-xl whitespace-nowrap p-2 font-medium'>Bewerber-erfolgs-special</div>
-                            <div className='absolute -left-24 -bottom-10 px-6 py-0 bg-white hxl:max-w-[410px] max-w-[80%] w-full aspect-square'>
+                            <div className='absolute -left-24 -bottom-10 px-6 py-0 bg-white hxl:max-w-[410px] lg:max-w-[80%] md:max-w-[380px] w-full aspect-square'>
                                 <div className='relative w-full h-full flex flex-col justify-center'>
                                     <div className='grid grid-cols-2 gap-4'>
                                         <div className='col-span-1 flex items-center justify-between bg-secondary rounded-full px-3 py-2 gap-2'>
@@ -137,8 +137,8 @@ const Home = () => {
                             <div className='max-h-[66px]'>
                                 <img src={cardfirsticon} alt="" />
                             </div>
-                            <div className="text-[24px] font-medium leading-[31.2px]">Prozessübernahme</div>
-                            <div className="xs:text-[16px] text-[14px] xs:leading-[24px] leading-[21px] text-t-primary font-medium">Wir kümmern uns um den gesamten Prozess – von der Erstellung bis zur Veröffentlichung Ihrer Stellenanzeigen. Sie haben weniger Arbeit und sparen wertvolle Zeit.</div>
+                            <div className="text-[24px] font-medium leading-[31.2px] mb-2">Prozessübernahme</div>
+                            <div className="xs:text-[16px] text-[14px] xs:leading-[24px] leading-[21px] text-t-primary font-regular">Wir kümmern uns um den gesamten Prozess – von der Erstellung bis zur Veröffentlichung Ihrer Stellenanzeigen. Sie haben weniger Arbeit und sparen wertvolle Zeit.</div>
                         </div>
 
                     </NavLink>
@@ -147,8 +147,8 @@ const Home = () => {
                             <div className='max-h-[66px]'>
                                 <img src={cardsecondicon} alt="" />
                             </div>
-                            <div className="text-[24px] font-medium leading-[31.2px]">Kosteneinsparnis</div>
-                            <div className="xs:text-[16px] text-[14px] xs:leading-[24px] leading-[21px] text-t-primary font-medium">Mit unseren Stellenpaketen sparen Sie bis zu 70 % der Kosten im Vergleich zu Einzelbuchungen.</div>
+                            <div className="text-[24px] font-medium leading-[31.2px] mb-2">Kosteneinsparnis</div>
+                            <div className="xs:text-[16px] text-[14px] xs:leading-[24px] leading-[21px] text-t-primary font-regular">Mit unseren Stellenpaketen sparen Sie bis zu 70 % der Kosten im Vergleich zu Einzelbuchungen.</div>
                         </div>
 
 
@@ -158,8 +158,8 @@ const Home = () => {
                             <div className='max-h-[66px]'>
                                 <img src={cardthirdicon} alt="" />
                             </div>
-                            <div className="text-[24px] font-medium leading-[31.2px]">Top Beratung</div>
-                            <div className="xs:text-[16px] text-[14px] xs:leading-[24px] leading-[21px] text-t-primary font-medium">Profitieren Sie von unserer über 20-jährigen Markterfahrung. Wir wissen genau, welche Stellenmärkte am besten zu Ihren Anforderungen passen.</div>
+                            <div className="text-[24px] font-medium leading-[31.2px] mb-2">Top Beratung</div>
+                            <div className="xs:text-[16px] text-[14px] xs:leading-[24px] leading-[21px] text-t-primary font-regular">Profitieren Sie von unserer über 20-jährigen Markterfahrung. Wir wissen genau, welche Stellenmärkte am besten zu Ihren Anforderungen passen.</div>
                             <div className="md:flex hidden"></div>
 
                         </div>
@@ -218,8 +218,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='lg:col-span-1 col-span-2 h-full flex-col px-6 flex items-center justify-center bg-white border'>
-                            <img className='lg:max-w-[80%] max-w-[475px] w-full object-contain aspect-square' src={sectionFirstImage} alt="" />
+                        <div className='lg:col-span-1 col-span-2 h-full flex-col px-6 flex items-center justify-center'>
+                            <img className='max-w-[475px] w-full  bg-custom-yellow p-4' src={sectionFirstImage} alt="" />
                         </div>
                     </div>
                     <div className="grid grid-cols-2 items-center gap-2">
@@ -254,8 +254,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='lg:col-span-1 col-span-2 h-full flex-col px-6 flex items-center justify-center border bg-white'>
-                            <img className='lg:max-w-[80%] max-w-[475px] w-full object-contain aspect-square' src={sectionSecondImage} alt="" />
+                        <div className='lg:col-span-1 col-span-2 h-full flex-col px-6 flex items-center justify-center'>
+                            <img className='max-w-[475px] w-full  bg-custom-yellow p-4' src={sectionSecondImage} alt="" />
                         </div>
                     </div>
                     <div className="grid grid-cols-2 items-center gap-2">
@@ -290,8 +290,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='lg:col-span-1 col-span-2 h-full flex-col px-6 flex items-center justify-center bg-white border'>
-                            <img className='lg:max-w-[80%] max-w-[475px] w-full object-contain aspect-square' src={sectionThirdImage} alt="" />
+                        <div className='lg:col-span-1 col-span-2 flex-col px-6 flex items-center justify-center '>
+                            <img className='max-w-[475px] w-full  bg-custom-yellow p-4' src={sectionThirdImage} alt="" />
                         </div>
                     </div>
                 </div>
@@ -428,19 +428,19 @@ const Home = () => {
 
             <section className='py-[72px] bg-white px-6'>
                 <div className='max-w-[1296px] w-full mx-auto flex flex-col gap-12'>
-                    <div className='md:text-[54px] xs:text-[40px] text-[36px] md:leading-[59.4px] xs:leading-[48px] leading-[43.2px] font-medium'>Kennzahlen auf einen Blick:</div>
+                    <div className='md:text-[36px] xs:text-[30px] text-[27px] md:leading-[41.4px] xs:leading-[36px] leading-[32.4px] font-medium text-t-primary'>Kennzahlen auf einen Blick:</div>
                     <div className='flex lg:flex-row flex-col items-center justify-center xs:gap-12 gap-6'>
                         <div className='flex flex-col w-full gap-6'>
-                            <div className='md:text-[54px] xs:text-[40px] text-[36px] md:leading-[59.4px] xs:leading-[48px] leading-[43.2px] font-medium'>45%</div>
-                            <div className='text-[24px] font-medium leading-[31.2px]'>Increase in hiring efficiency</div>
+                            <div className='md:text-[36px] xs:text-[30px] text-[27px] md:leading-[41.4px] xs:leading-[36px] leading-[32.4px] font-medium text-t-primary'>45</div>
+                            <div className='text-[24px] font-medium leading-[31.2px]'>Eigene Jobbörsen</div>
                         </div>
                         <div className='flex flex-col w-full gap-6'>
-                            <div className='md:text-[54px] xs:text-[40px] text-[36px] md:leading-[59.4px] xs:leading-[48px] leading-[43.2px] font-medium'>60%</div>
-                            <div className='text-[24px] font-medium leading-[31.2px]'>Faster Onboarding</div>
+                            <div className='md:text-[36px] xs:text-[30px] text-[27px] md:leading-[41.4px] xs:leading-[36px] leading-[32.4px] font-medium text-t-primary'>2873</div>
+                            <div className='text-[24px] font-medium leading-[31.2px]'>Zufriedene Kunden</div>
                         </div>
                         <div className='flex flex-col w-full gap-6'>
-                            <div className='md:text-[54px] xs:text-[40px] text-[36px] md:leading-[59.4px] xs:leading-[48px] leading-[43.2px] font-medium'>2x</div>
-                            <div className='text-[24px] font-medium leading-[31.2px]'>Increase in candidate quality</div>
+                            <div className='md:text-[36px] xs:text-[30px] text-[27px] md:leading-[41.4px] xs:leading-[36px] leading-[32.4px] font-medium text-t-primary'>50562</div>
+                            <div className='text-[24px] font-medium leading-[31.2px]'>Erfolgreiche Projekte</div>
                         </div>
                     </div>
                 </div>
