@@ -52,10 +52,8 @@ const InfiniteScrollTags = () => {
                 {extendedTagList.map((tag, index) => (
                     <div
                         key={index}
-                        className="inline-block bg-custom-yellow text-t-primary pt-[20px] pb-[24px] border-2 border-black px-[40px] mx-2 text-[28px] so-bold rounded-md"
-                        style={{
-                            boxShadow: "4px 4px 0px 0px #000000", // Siyah gölge (shadow)
-                        }}
+                        className="inline-block bg-custom-yellow font-semibold text-t-primary lg:pt-[20px] pt-[16px] lg:pb-[24px] pb-[20px] border-2 border-black px-[40px] mx-2 lg:text-[28px] md:text-[24px] text-[20px]"
+
                     >
                         {tag}
                     </div>

@@ -59,43 +59,12 @@
   font-style: normal;
 }
 
-/* Font Classes */
-.so-bold {
-  font-family: "Open Sauce One",sans-serif!important;
-  font-weight: 700!important;
-}
-.so-semibold{
-  font-family: "Open Sauce One",sans-serif!important;
-  font-weight: 600!important;
-}
 
-.so-medium {
-  font-family: "Open Sauce One",sans-serif!important;
-  font-weight: 500!important;
-}
 
-.so-regular {
-  font-family: "Open Sauce One",sans-serif!important;
-  font-weight: 400!important;
-}
-
-.ss-bold {
-  font-family: "Open Sauce Sans",sans-serif!important;
-  font-weight: 700!important;
-}
-.ss-semibold{
-  font-family: "Open Sauce Sans",sans-serif!important;
-  font-weight: 600!important;
-}
-
-.ss-medium {
-  font-family: "Open Sauce Sans",sans-serif!important;
-  font-weight: 500!important;
-}
-
-.ss-regular {
-  font-family: "Open Sauce Sans",sans-serif!important;
-  font-weight: 400!important;
+#root,html,body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sauce One',sans-serif;
 }
 
 
@@ -149,4 +118,25 @@ input::-webkit-inner-spin-button {
 .hover-down:hover {
   transform: translateY(3px);
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  --d:12px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #222222;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 1px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 1px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 1px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 1px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 2px;
+  animation: l27 1s infinite steps(50);
+}
+@keyframes l27 {
+  100% {transform: rotate(1turn)}
 }
