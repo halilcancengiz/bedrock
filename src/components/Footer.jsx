@@ -1,21 +1,29 @@
 import { Logo } from "../components/Logo"
 import { NavLink } from 'react-router-dom'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 
 
 const Footer = () => {
-    const footerRef = useRef(null)
-    const isInViewFooterRef = useInView(footerRef, { once: true });
+    const fadeInAnimationVariant = {
+        initial: {
+            opacity: 0,
+            y: 40
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+        }
+    };
 
     return (
-        <footer className='border-t'>
-            <motion.div
-                ref={footerRef}
-                initial={{ opacity: 0 }}
-                animate={isInViewFooterRef ? { opacity: 1 } : {}}
-                transition={{ duration: 0.5, ease: "easeIn" }}
-                className="mx-auto max-w-[1221px] w-full flex flex-col items-center justify-between text-[18px] px-6 leading-[20px]  pt-20 mb-10 text-t-primary">
+        <motion.footer
+            variants={fadeInAnimationVariant}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.3 }}
+            className='border-t'>
+            <div className="mx-auto max-w-[1221px] w-full flex flex-col items-center justify-between text-[18px] px-6 leading-[20px]  pt-20 mb-10 text-t-primary">
 
                 <div className='flex lg:flex-nowrap justify-between flex-wrap w-full'>
                     <div className='flex flex-col mr-10 lg:mb-[15px] mb-[35px] max-w-[357px] w-full items-start'>
@@ -25,7 +33,7 @@ const Footer = () => {
                         </div> */}
                     </div>
 
-                    <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap'>
+                    <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap  max-w-[400px] w-full'>
                         <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex  gap-x-3 hover-up-md py-[21px] px-6 border border-neutral-300'>
                             <div className="bg-secondary size-12 min-w-12 min-h-12 p-2.5  mr-[25px] overflow-hidden group/parent">
                                 <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
@@ -68,8 +76,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-            </motion.div>
-        </footer>
+            </div>
+        </motion.footer>
 
     )
 }

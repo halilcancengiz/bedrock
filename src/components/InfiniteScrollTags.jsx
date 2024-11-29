@@ -44,10 +44,7 @@ const InfiniteScrollTags = () => {
     const extendedTagList = [...tagList, ...tagList];
 
     return (
-        <div
-            ref={scrollContainerRef}
-            className="overflow-hidden bg-secondary whitespace-nowrap relative w-full py-4"
-        >
+        <div ref={scrollContainerRef} className="overflow-hidden bg-secondary whitespace-nowrap relative w-full py-4">
             <div className="inline-flex bg-secondary">
                 {extendedTagList.map((tag, index) => (
                     <div

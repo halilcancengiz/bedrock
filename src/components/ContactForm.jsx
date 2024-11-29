@@ -43,7 +43,7 @@ const ContactForm = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.30, duration: 0.3 }}
                     className="max-w-[487px] lg:mb-0 mb-20 lg:-mt-[50px] lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">
-                    <div className="mt-10 col-span-1 md:text-[36px] xs:text-[30px] text-[27px] md:leading-[41.4px] xs:leading-[36px] leading-[32.4px] font-medium text-t-primary mb-5">Jetzt Anfragen</div>
+                    <div className="lg:mt-[45px] col-span-1 md:text-[36px] xs:text-[30px] text-[27px] md:leading-[41.4px] xs:leading-[36px] leading-[32.4px] font-medium text-t-primary mb-5">Jetzt Anfragen</div>
                     <div className="xs:text-[16px] text-[14px] xs:leading-[24px] leading-[21px] text-t-primary font-medium mb-10">
                         Lassen Sie uns gemeinsam Ihre Ziele erreichen, mehr Bewerber erhalten und ihre vakanten Stellen besetzen.
                     </div>
@@ -89,7 +89,7 @@ const ContactForm = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.80, duration: 0.3 }}
                     style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
-                    className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] relative bg-white"
+                    className="lg:max-w-[600px] max-w-[660px] mx-auto lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] relative bg-white"
                 >
                     <form ref={formRef} onSubmit={(e) => { e.preventDefault(), setIsModalOpen(true), formRef.current.reset() }} className="grid grid-cols-2 gap-[20px] bg-white">
                         <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
