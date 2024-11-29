@@ -298,7 +298,7 @@ const Home = () => {
 
             </section> */}
 
-            <section className='py-[72px] flex flex-col bg-white'>
+            <section className='pt-[72px] flex flex-col bg-white'>
 
                 <h2 className='max-w-[1296px] w-full mx-auto md:text-[36px] xs:text-[30px] text-center text-[27px] md:leading-[41.4px] xs:leading-[36px] leading-[32.4px] font-medium text-t-primary bg-secondary pt-[72px]'>
                     Wie es funktioniert? - in 3 Simplen Schritten zum Erfolg
@@ -332,8 +332,8 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-span-1 bg-custom-yellow p-10'>
-                        <img className='w-full h-full' src={sectionFirstImage} alt="" />
+                    <div className='col-span-1 bg-custom-yellow p-5'>
+                        <img className='w-full h-full lg:max-h-[350px]' src={sectionFirstImage} alt="" />
                     </div>
                 </div>
 
@@ -370,8 +370,8 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-span-1 bg-custom-yellow p-10'>
-                        <img className='w-full h-full' src={sectionSecondImage} alt="" />
+                    <div className='col-span-1 bg-custom-yellow p-5'>
+                        <img className='w-full h-full lg:max-h-[350px]' src={sectionSecondImage} alt="" />
                     </div>
                 </div>
 
@@ -408,13 +408,13 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-span-1 bg-custom-yellow p-10'>
-                        <img className='w-full h-full' src={sectionThirdImage} alt="" />
+                    <div className='col-span-1 bg-custom-yellow p-5'>
+                        <img className='w-full h-full lg:max-h-[400px]' src={sectionThirdImage} alt="" />
                     </div>
                 </div>
             </section>
 
-            <section className='py-[72px] bg-secondary px-6'>
+            <section className='py-[72px] bg-white px-6'>
                 <div className='flex flex-col max-w-[660px] w-full mx-auto gap-8'>
                     <div className='text-[24px] font-medium leading-[31.2px] text-center'>Optimieren Sie Ihre Stellenanzeigen mit uns – schnell, einfach und professionell!</div>
                     <div className='flex items-center justify-center flex-col gap-4'>
