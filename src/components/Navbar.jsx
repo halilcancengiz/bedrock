@@ -31,31 +31,7 @@ const Navbar = () => {
     return (
         <header className="flex items-center bg-white gap-5 h-[70px] text-t-primary py-6 border-b-[1px] border-neutral-300 relative px-6">
             <div className="mx-auto max-w-[1296px] w-full flex items-center text-[18px] leading-[20px] justify-between">
-                <div className="lg:flex hidden items-center gap-x-8 invisible">
-                    <nav className="lg:flex hidden items-center gap-x-8">
-                        <NavLink className="flex items-center gap-1 text-t-primary transition-all duration-300  text-sm font-medium" to="/" >
-                            Start
-                        </NavLink>
-                    </nav>
 
-                    <div className="flex items-center gap-x-8">
-                        <NavLink className="md:flex hidden" to="/contact">
-                            <Button>
-                                Kontakt
-                            </Button>
-                        </NavLink>
-                        <div className={`${isMobileNavOpen ? "bg-secondary3" : "bg-primary"} hover:bg-secondary3 transition-all duration-300 lg:hidden ml-3`}>
-                            <Hamburger
-                                aria-label="Toggle mobile navbar"
-                                toggled={isMobileNavOpen}
-                                toggle={toggleMobileNav}
-                                size={20}
-                                color="white"
-                                duration={0.8}
-                            />
-                        </div>
-                    </div>
-                </div>
 
                 <Logo />
 
