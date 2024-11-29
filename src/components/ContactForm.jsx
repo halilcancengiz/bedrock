@@ -105,28 +105,28 @@ const ContactForm = () => {
                             <input id="email" name="email" required placeholder="name@domain.de" className="placeholder:text-t-primary text-t-primary py-2 px-5 h-[48px] border  hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base " type="email" />
                         </div>
                         <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                            <label htmlFor="phonenumber" className="xs:text-[18px] text-base font-bold ">Telefonnummer<span className=" text-t-primary ml-1">(optional)</span></label>
+                            <label htmlFor="phonenumber" className="xs:text-[18px] text-base font-bold ">Telefonnummer<span className=" text-gray-400 ml-1 font-normal">(optional)</span></label>
                             <input id="phonenumber" placeholder="0123 4567890" className="placeholder:text-t-primary text-t-primary py-2 px-5 h-[48px] border  hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base " type="number" />
                         </div>
                         <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                            <label htmlFor="companyname" className="xs:text-[18px] text-base font-bold ">Firma<span className=" text-t-primary ml-1">(optional)</span></label>
+                            <label htmlFor="companyname" className="xs:text-[18px] text-base font-bold ">Firma<span className=" text-gray-400 ml-1 font-normal">(optional)</span></label>
                             <input id="companyname" name="companyname" placeholder="Mustermann GmbH" className="placeholder:text-t-primary text-t-primary py-2 px-5 h-[48px] border  hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base " type="text" />
                         </div>
                         <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                            <label htmlFor="street" className="xs:text-[18px] text-base font-bold ">Straße, Nr.<span className=" text-t-primary ml-1">(optional)</span></label>
+                            <label htmlFor="street" className="xs:text-[18px] text-base font-bold ">Straße, Nr.<span className=" text-gray-400 ml-1 font-normal">(optional)</span></label>
                             <input id="street" name="street" placeholder="Musterstraße 1" className="placeholder:text-t-primary text-t-primary py-2 px-5 h-[48px] border  hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base " type="text" />
                         </div>
                         <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                            <label htmlFor="zipcode" className="xs:text-[18px] text-base font-bold ">PLZ<span className=" text-t-primary ml-1">(optional)</span></label>
+                            <label htmlFor="zipcode" className="xs:text-[18px] text-base font-bold ">PLZ<span className=" text-gray-400 ml-1 font-normal">(optional)</span></label>
                             <input id="zipcode" name="zipcode" placeholder="12345" className="placeholder:text-t-primary text-t-primary py-2 px-5 h-[48px] border  hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base " type="number" />
                         </div>
                         <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                            <label htmlFor="location" className="xs:text-[18px] text-base font-bold ">Ort<span className=" text-t-primary ml-1">(optional)</span></label>
+                            <label htmlFor="location" className="xs:text-[18px] text-base font-bold ">Ort<span className=" text-gray-400 ml-1 font-normal">(optional)</span></label>
                             <input id="location" name="location" placeholder="Musterstadt" className="placeholder:text-t-primary text-t-primary py-2 px-5 h-[48px] border  hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base " type="text" />
                         </div>
 
                         <div className="col-span-2 flex flex-col gap-3">
-                            <label htmlFor="message" className="xs:text-[18px] text-base font-bold ">Nachricht<span className=" text-t-primary ml-1">(optional)</span></label>
+                            <label htmlFor="message" className="xs:text-[18px] text-base font-bold ">Nachricht<span className=" text-gray-400 ml-1 font-normal">(optional)</span></label>
                             <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-t-primary text-t-primary focus:outline-none border  py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300"></textarea>
                         </div>
 
