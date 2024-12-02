@@ -59,7 +59,9 @@ const Home = () => {
     };
 
     const jumbotronBoldText = `70% günstiger`
+    const jumbotronBoldText2 = `schalten`
     const jumbotronTextSplit = splitStringUsingRegex(jumbotronBoldText)
+    const jumbotronTextSplit2 = splitStringUsingRegex(jumbotronBoldText2)
     const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF" }, reveal: { opacity: 1, color: "#14142B" } };
     return (
         <main>
@@ -92,7 +94,24 @@ const Home = () => {
                                 ))}
 
                             </motion.span>
-                            &nbsp;schalten
+                            <motion.span
+                                className="inline-flex flex-wrap-nowrap"
+                                style={{ whiteSpace: 'nowrap' }}
+                            >
+                                {jumbotronTextSplit2.map((char, index) => (
+                                    <motion.span
+                                        key={index}
+                                        className="font-medium inline-block"
+                                        variants={charVariants9}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        {char}
+                                        {char === "%" ? "\u00A0" : ""}
+                                    </motion.span>
+                                ))}
+
+                            </motion.span>
+                            
                         </motion.div>
                         <div className='flex flex-col gap-6 lg:max-w-[384px] max-w-[600px] w-full'>
                             <motion.div
@@ -482,7 +501,7 @@ const Home = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3, duration: 0.3 }}
-                                className='col-span-2 bg-secondary flex items-center justify-between gap-2 px-2 py-2 rounded-full'>
+                                className='col-span-2 bg-secondary xs:flex hidden items-center justify-between gap-2 px-2 py-2 rounded-full'>
                                 <img className='object-contain h-3' src={stepstone} alt="" />
                                 <div className='flex items-center justify-center gap-1'>
                                     <BsFillClockFill size={11} color="gray" />
@@ -495,7 +514,7 @@ const Home = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5, duration: 0.3 }}
-                                className='col-span-2 bg-secondary flex items-center justify-between gap-2 px-2 py-2 rounded-full'>
+                                className='col-span-2 bg-secondary xs:flex hidden items-center justify-between gap-2 px-2 py-2 rounded-full'>
                                 <img className='object-contain h-3' src={indeed} alt="" />
                                 <div className='flex items-center justify-center gap-1'>
                                     <BsFillClockFill size={11} color="gray" />
@@ -508,7 +527,7 @@ const Home = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.7, duration: 0.3 }}
-                                className='col-span-2 bg-secondary flex items-center justify-between gap-2 px-2 py-2 rounded-full'>
+                                className='col-span-2 bg-secondary xs:flex hidden items-center justify-between gap-2 px-2 py-2 rounded-full'>
                                 <img className='object-contain h-5' src={jobninja} alt="" />
                                 <div className='flex items-center justify-center gap-1'>
                                     <BsFillClockFill size={11} color="gray" />
@@ -521,7 +540,7 @@ const Home = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.9, duration: 0.3 }}
-                                className='col-span-2 bg-secondary flex items-center justify-between gap-2 px-2 py-2 rounded-full'>
+                                className='col-span-2 bg-secondary xs:flex hidden items-center justify-between gap-2 px-2 py-2 rounded-full'>
                                 <img className='object-contain h-5' src={mittelstand} alt="" />
                                 <div className='flex items-center justify-center gap-1'>
                                     <BsFillClockFill size={11} color="gray" />

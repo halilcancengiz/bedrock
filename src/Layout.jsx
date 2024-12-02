@@ -1,27 +1,30 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import { AppRoutes } from './routes/AppRoutes';
-import Loader from './components/Loader';
+import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import { AppRoutes } from "./routes/AppRoutes";
+import Loader from "./components/Loader";
 
 const Layout = () => {
   const location = useLocation();
-  const [contentVisible, setContentVisible] = useState(false); // Başlangıçta false
-  const [showLoader, setShowLoader] = useState(true); // Loader başlangıçta gösteriliyor
+  const [loadingState, setLoadingState] = useState("loading"); // "loading" veya "content" durumu
   const [previousWidth, setPreviousWidth] = useState(window.innerWidth);
   const [previousPathname, setPreviousPathname] = useState(location.pathname);
+  const animationTimeout = useRef(null);
 
   const breakpoints = [480, 768, 992];
 
+  // Animasyonu başlatır
   const startAnimation = () => {
-    setShowLoader(true);
-    setContentVisible(false);
+    setLoadingState("loading");
 
-    setTimeout(() => {
-      setShowLoader(false);
-      setContentVisible(true);
+    if (animationTimeout.current) {
+      clearTimeout(animationTimeout.current);
+    }
+
+    animationTimeout.current = setTimeout(() => {
+      setLoadingState("content");
     }, 1000); // 1 saniye loader görünsün
   };
 
@@ -30,10 +33,13 @@ const Layout = () => {
     const handleLoad = () => {
       startAnimation();
     };
-    window.addEventListener('load', handleLoad);
+    window.addEventListener("load", handleLoad);
 
     return () => {
-      window.removeEventListener('load', handleLoad);
+      window.removeEventListener("load", handleLoad);
+      if (animationTimeout.current) {
+        clearTimeout(animationTimeout.current);
+      }
     };
   }, []);
 
@@ -45,9 +51,17 @@ const Layout = () => {
     }
   }, [location.pathname, previousPathname]);
 
-  // Breakpoint kontrolü ve animasyon tetikleme
+  // Ekran boyutu değişimlerini izleyerek animasyonu başlatır
   useEffect(() => {
-    const handleResize = () => {
+    const debounce = (func, wait) => {
+      let timeout;
+      return () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(func, wait);
+      };
+    };
+     
+    const handleResize = debounce(() => {
       const currentWidth = window.innerWidth;
 
       const isPreviousCrossingBreakpoint = breakpoints.some(
@@ -61,26 +75,26 @@ const Layout = () => {
       }
 
       setPreviousWidth(currentWidth);
-    };
+    }, 200); // 200ms debounce süresi
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [previousWidth, breakpoints]);
 
   return (
     <div className="flex flex-col relative">
-      {/* Loader sadece `showLoader` true olduğunda görünüyor */}
-      {showLoader && (
+      {/* Loader sadece "loading" durumunda gösteriliyor */}
+      {loadingState === "loading" && (
         <div className="flex items-center justify-center h-screen w-full">
           <Loader />
         </div>
       )}
 
-      {/* Ana içerik `contentVisible` true olduğunda gösteriliyor */}
-      {contentVisible && (
+      {/* Ana içerik "content" durumunda gösteriliyor */}
+      {loadingState === "content" && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
